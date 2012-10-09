@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Mon Oct  8 23:24:02 2012</timestamp>
+  <timestamp>Tue Oct  9 07:45:48 2012</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -85,48 +85,6 @@
     <param>
       <key>_coordinate</key>
       <value>(157, 133)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>precog_msg_to_stdout</key>
-    <param>
-      <key>id</key>
-      <value>precog_msg_to_stdout_0_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(910, 272)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>extras_pmt_rpc</key>
-    <param>
-      <key>id</key>
-      <value>extras_pmt_rpc_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>result_msg</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(679, 269)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1010,6 +968,29 @@
       <value>0</value>
     </param>
   </block>
+  <block>
+    <key>extras_pmt_rpc</key>
+    <param>
+      <key>id</key>
+      <value>extras_pmt_rpc_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>result_msg</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(679, 269)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
   <connection>
     <source_block_id>heart_beat_0</source_block_id>
     <sink_block_id>my_second_msg_block_0</sink_block_id>
@@ -1032,12 +1013,6 @@
     <source_block_id>my_second_msg_block_0</source_block_id>
     <sink_block_id>extras_pmt_rpc_0</sink_block_id>
     <source_key>1</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>extras_pmt_rpc_0</source_block_id>
-    <sink_block_id>precog_msg_to_stdout_0_0</sink_block_id>
-    <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>

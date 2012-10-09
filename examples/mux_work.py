@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 ##################################################
 # Gnuradio Python Flow Graph
-# Title: Top Block
-# Generated: Tue Oct  9 12:43:33 2012
+# Title: Mux Work
+# Generated: Tue Oct  9 12:43:47 2012
 ##################################################
 
 from gnuradio import eng_notation
@@ -14,10 +14,10 @@ from optparse import OptionParser
 import precog
 import wx
 
-class top_block(grc_wxgui.top_block_gui):
+class mux_work(grc_wxgui.top_block_gui):
 
 	def __init__(self):
-		grc_wxgui.top_block_gui.__init__(self, title="Top Block")
+		grc_wxgui.top_block_gui.__init__(self, title="Mux Work")
 		_icon_path = "/usr/share/icons/hicolor/32x32/apps/gnuradio-grc.png"
 		self.SetIcon(wx.Icon(_icon_path, wx.BITMAP_TYPE_ANY))
 
@@ -50,6 +50,6 @@ class top_block(grc_wxgui.top_block_gui):
 if __name__ == '__main__':
 	parser = OptionParser(option_class=eng_option, usage="%prog: [options]")
 	(options, args) = parser.parse_args()
-	tb = top_block()
+	tb = mux_work()
 	tb.Run(True)
 
