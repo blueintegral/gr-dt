@@ -2,7 +2,7 @@
 ##################################################
 # Gnuradio Python Flow Graph
 # Title: Simple Trx 1
-# Generated: Tue Oct  9 12:58:41 2012
+# Generated: Wed Oct 10 21:47:50 2012
 ##################################################
 
 execfile("/home/john/.grc_gnuradio/radio_hier.py")
@@ -17,7 +17,7 @@ import wx
 
 class simple_trx_1(grc_wxgui.top_block_gui):
 
-	def __init__(self, radio_addr=0, rate=1e6, tx_gain=15, samp_per_sym=4, freq=915e6, dest_addr=86, arq_timeout=.10, max_arq_attempts=10, rx_freq=915e6, rx_gain=15, args="", ampl=0.7, port="12345"):
+	def __init__(self, radio_addr=0, rate=1e6, tx_gain=15, samp_per_sym=4, freq=915e6, dest_addr=86, arq_timeout=.10, max_arq_attempts=10, rx_freq=915e6, args="", ampl=0.7, port="12345", rx_gain=20, rx_ant="TX/RX"):
 		grc_wxgui.top_block_gui.__init__(self, title="Simple Trx 1")
 		_icon_path = "/usr/share/icons/hicolor/32x32/apps/gnuradio-grc.png"
 		self.SetIcon(wx.Icon(_icon_path, wx.BITMAP_TYPE_ANY))
@@ -34,10 +34,11 @@ class simple_trx_1(grc_wxgui.top_block_gui):
 		self.arq_timeout = arq_timeout
 		self.max_arq_attempts = max_arq_attempts
 		self.rx_freq = rx_freq
-		self.rx_gain = rx_gain
 		self.args = args
 		self.ampl = ampl
 		self.port = port
+		self.rx_gain = rx_gain
+		self.rx_ant = rx_ant
 
 		##################################################
 		# Variables
@@ -56,7 +57,7 @@ class simple_trx_1(grc_wxgui.top_block_gui):
 			samp_per_sym=samp_per_sym,
 			tx_freq=freq,
 			rate=rate,
-			rx_ant='TX/RX',
+			rx_ant=rx_ant,
 		)
 		self.extras_socket_msg_0 = gr_extras.socket_msg("TCP", "127.0.0.1", port, 0)
 
@@ -126,13 +127,6 @@ class simple_trx_1(grc_wxgui.top_block_gui):
 		self.rx_freq = rx_freq
 		self.radio_hier_0.set_rx_freq(self.rx_freq)
 
-	def get_rx_gain(self):
-		return self.rx_gain
-
-	def set_rx_gain(self, rx_gain):
-		self.rx_gain = rx_gain
-		self.radio_hier_0.set_rx_gain(self.rx_gain)
-
 	def get_args(self):
 		return self.args
 
@@ -152,6 +146,20 @@ class simple_trx_1(grc_wxgui.top_block_gui):
 
 	def set_port(self, port):
 		self.port = port
+
+	def get_rx_gain(self):
+		return self.rx_gain
+
+	def set_rx_gain(self, rx_gain):
+		self.rx_gain = rx_gain
+		self.radio_hier_0.set_rx_gain(self.rx_gain)
+
+	def get_rx_ant(self):
+		return self.rx_ant
+
+	def set_rx_ant(self, rx_ant):
+		self.rx_ant = rx_ant
+		self.radio_hier_0.set_rx_ant(self.rx_ant)
 
 	def get_samp_rate(self):
 		return self.samp_rate
@@ -179,15 +187,17 @@ if __name__ == '__main__':
 		help="Set max_arq_attempts [default=%default]")
 	parser.add_option("", "--rx-freq", dest="rx_freq", type="eng_float", default=eng_notation.num_to_str(915e6),
 		help="Set rx_freq [default=%default]")
-	parser.add_option("", "--rx-gain", dest="rx_gain", type="eng_float", default=eng_notation.num_to_str(15),
-		help="Set rx_gain [default=%default]")
 	parser.add_option("", "--args", dest="args", type="string", default="",
 		help="Set args [default=%default]")
 	parser.add_option("", "--ampl", dest="ampl", type="eng_float", default=eng_notation.num_to_str(0.7),
 		help="Set a [default=%default]")
 	parser.add_option("", "--port", dest="port", type="string", default="12345",
 		help="Set port [default=%default]")
+	parser.add_option("", "--rx-gain", dest="rx_gain", type="eng_float", default=eng_notation.num_to_str(20),
+		help="Set rx_gain [default=%default]")
+	parser.add_option("", "--rx-ant", dest="rx_ant", type="string", default="TX/RX",
+		help="Set rx_ant [default=%default]")
 	(options, args) = parser.parse_args()
-	tb = simple_trx_1(radio_addr=options.radio_addr, rate=options.rate, tx_gain=options.tx_gain, samp_per_sym=options.samp_per_sym, freq=options.freq, dest_addr=options.dest_addr, arq_timeout=options.arq_timeout, max_arq_attempts=options.max_arq_attempts, rx_freq=options.rx_freq, rx_gain=options.rx_gain, args=options.args, ampl=options.ampl, port=options.port)
+	tb = simple_trx_1(radio_addr=options.radio_addr, rate=options.rate, tx_gain=options.tx_gain, samp_per_sym=options.samp_per_sym, freq=options.freq, dest_addr=options.dest_addr, arq_timeout=options.arq_timeout, max_arq_attempts=options.max_arq_attempts, rx_freq=options.rx_freq, args=options.args, ampl=options.ampl, port=options.port, rx_gain=options.rx_gain, rx_ant=options.rx_ant)
 	tb.Run(True)
 

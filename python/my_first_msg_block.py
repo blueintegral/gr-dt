@@ -79,12 +79,23 @@ class my_first_msg_block(gr.block):
         
                 #recall that a pmt includes a key, source, offset, and value
                 key = pmt.pmt_symbol_to_string(msg.key)
-                print "Key: ",key
+                #print "Key: ",key
                 
                 #now lets get the actual data
                 blob = pmt.pmt_blob_data(msg.value)
                 
-                print "Blob Value: ",blob.tostring()
+                if blob[0] == 0:
+                    tx_str = "Emitter off\n\r"
+                else:
+                    tx_str = "Emitter detected\n\r"
+                
+                #print "Blob Value: ",blob.tostring()
+                
+                blob = self.mgr.acquire(True) #block
+                pmt.pmt_blob_resize(blob, len(tx_str))
+                pmt.pmt_blob_rw_data(blob)[:] = numpy.fromstring(tx_str, dtype='uint8')
+                
+                self.post_msg(0,pmt.pmt_string_to_symbol("n/a"), blob, pmt.pmt_string_to_symbol("rpt") )
                 
             else:
                 

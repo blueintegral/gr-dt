@@ -1,6 +1,65 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Tue Oct  9 12:49:57 2012</timestamp>
+  <timestamp>Wed Oct 10 22:09:30 2012</timestamp>
+  <block>
+    <key>options</key>
+    <param>
+      <key>id</key>
+      <value>simple_trx_2</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>title</key>
+      <value></value>
+    </param>
+    <param>
+      <key>author</key>
+      <value></value>
+    </param>
+    <param>
+      <key>description</key>
+      <value></value>
+    </param>
+    <param>
+      <key>window_size</key>
+      <value>3000, 1024</value>
+    </param>
+    <param>
+      <key>generate_options</key>
+      <value>wx_gui</value>
+    </param>
+    <param>
+      <key>category</key>
+      <value>Custom</value>
+    </param>
+    <param>
+      <key>run_options</key>
+      <value>prompt</value>
+    </param>
+    <param>
+      <key>run</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>max_nouts</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>realtime_scheduling</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(13, 10)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
   <block>
     <key>variable</key>
     <param>
@@ -18,41 +77,6 @@
     <param>
       <key>_coordinate</key>
       <value>(206, 22)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>parameter</key>
-    <param>
-      <key>id</key>
-      <value>radio_addr</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value></value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>intx</value>
-    </param>
-    <param>
-      <key>short_id</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(460, 637)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -511,61 +535,6 @@
     </param>
   </block>
   <block>
-    <key>radio_hier</key>
-    <param>
-      <key>id</key>
-      <value>radio_hier_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>rx_gain</key>
-      <value>rx_gain</value>
-    </param>
-    <param>
-      <key>ampl</key>
-      <value>ampl</value>
-    </param>
-    <param>
-      <key>tx_gain</key>
-      <value>tx_gain</value>
-    </param>
-    <param>
-      <key>rx_freq</key>
-      <value>rx_freq</value>
-    </param>
-    <param>
-      <key>args</key>
-      <value>args</value>
-    </param>
-    <param>
-      <key>samp_per_sym</key>
-      <value>samp_per_sym</value>
-    </param>
-    <param>
-      <key>tx_freq</key>
-      <value>freq</value>
-    </param>
-    <param>
-      <key>rate</key>
-      <value>rate</value>
-    </param>
-    <param>
-      <key>rx_ant</key>
-      <value>'TX/RX'</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(662, 41)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>180</value>
-    </param>
-  </block>
-  <block>
     <key>virtual_channel_formatter</key>
     <param>
       <key>id</key>
@@ -659,58 +628,124 @@
     </param>
   </block>
   <block>
-    <key>options</key>
+    <key>parameter</key>
     <param>
       <key>id</key>
-      <value>simple_trx_2</value>
+      <value>radio_addr</value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>title</key>
+      <key>label</key>
       <value></value>
     </param>
     <param>
-      <key>author</key>
-      <value></value>
-    </param>
-    <param>
-      <key>description</key>
-      <value></value>
-    </param>
-    <param>
-      <key>window_size</key>
-      <value>3000, 1024</value>
-    </param>
-    <param>
-      <key>generate_options</key>
-      <value>wx_gui</value>
-    </param>
-    <param>
-      <key>category</key>
-      <value>Custom</value>
-    </param>
-    <param>
-      <key>run_options</key>
-      <value>prompt</value>
-    </param>
-    <param>
-      <key>run</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>max_nouts</key>
+      <key>value</key>
       <value>0</value>
     </param>
     <param>
-      <key>realtime_scheduling</key>
+      <key>type</key>
+      <value>intx</value>
+    </param>
+    <param>
+      <key>short_id</key>
       <value></value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(13, 10)</value>
+      <value>(460, 636)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>radio_hier</key>
+    <param>
+      <key>id</key>
+      <value>radio_hier_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>rx_gain</key>
+      <value>rx_gain</value>
+    </param>
+    <param>
+      <key>ampl</key>
+      <value>ampl</value>
+    </param>
+    <param>
+      <key>tx_gain</key>
+      <value>tx_gain</value>
+    </param>
+    <param>
+      <key>rx_freq</key>
+      <value>rx_freq</value>
+    </param>
+    <param>
+      <key>args</key>
+      <value>args</value>
+    </param>
+    <param>
+      <key>samp_per_sym</key>
+      <value>samp_per_sym</value>
+    </param>
+    <param>
+      <key>tx_freq</key>
+      <value>freq</value>
+    </param>
+    <param>
+      <key>rate</key>
+      <value>rate</value>
+    </param>
+    <param>
+      <key>rx_ant</key>
+      <value>rx_ant</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(662, 41)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+  </block>
+  <block>
+    <key>parameter</key>
+    <param>
+      <key>id</key>
+      <value>rx_ant</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>TX/RX</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>string</value>
+    </param>
+    <param>
+      <key>short_id</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(728, 780)</value>
     </param>
     <param>
       <key>_rotation</key>

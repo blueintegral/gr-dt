@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Tue Oct  9 13:01:06 2012</timestamp>
+  <timestamp>Wed Oct 10 21:45:05 2012</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -402,96 +402,6 @@
     <key>parameter</key>
     <param>
       <key>id</key>
-      <value>ampl</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>a</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>0.7</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>eng_float</value>
-    </param>
-    <param>
-      <key>short_id</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(347, 760)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>radio_hier</key>
-    <param>
-      <key>id</key>
-      <value>radio_hier_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>rx_gain</key>
-      <value>rx_gain</value>
-    </param>
-    <param>
-      <key>ampl</key>
-      <value>ampl</value>
-    </param>
-    <param>
-      <key>tx_gain</key>
-      <value>tx_gain</value>
-    </param>
-    <param>
-      <key>rx_freq</key>
-      <value>rx_freq</value>
-    </param>
-    <param>
-      <key>args</key>
-      <value>args</value>
-    </param>
-    <param>
-      <key>samp_per_sym</key>
-      <value>samp_per_sym</value>
-    </param>
-    <param>
-      <key>tx_freq</key>
-      <value>freq</value>
-    </param>
-    <param>
-      <key>rate</key>
-      <value>rate</value>
-    </param>
-    <param>
-      <key>rx_ant</key>
-      <value>'TX/RX'</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(662, 41)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>180</value>
-    </param>
-  </block>
-  <block>
-    <key>parameter</key>
-    <param>
-      <key>id</key>
       <value>radio_addr</value>
     </param>
     <param>
@@ -517,68 +427,6 @@
     <param>
       <key>_coordinate</key>
       <value>(460, 637)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>simple_mac</key>
-    <param>
-      <key>id</key>
-      <value>simple_mac_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>addr</key>
-      <value>radio_addr</value>
-    </param>
-    <param>
-      <key>maximum_attempts</key>
-      <value>max_arq_attempts</value>
-    </param>
-    <param>
-      <key>timeout</key>
-      <value>arq_timeout</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(627, 275)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>heart_beat</key>
-    <param>
-      <key>id</key>
-      <value>heart_beat_0_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>period</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>key</key>
-      <value>W</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>beacon_message</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(84, 170)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -729,22 +577,57 @@
     </param>
   </block>
   <block>
-    <key>virtual_channel_mux</key>
+    <key>heart_beat</key>
     <param>
       <key>id</key>
-      <value>virtual_channel_mux_0</value>
+      <value>heart_beat_0_0</value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>port_count</key>
-      <value>2</value>
+      <key>period</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>key</key>
+      <value>W</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>beacon_message</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(106, 290)</value>
+      <value>(84, 170)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>virtual_channel_formatter</key>
+    <param>
+      <key>id</key>
+      <value>virtual_channel_formatter_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>channel</key>
+      <value>dest_addr</value>
+    </param>
+    <param>
+      <key>arq</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(123, 292)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -771,7 +654,7 @@
     </param>
     <param>
       <key>port</key>
-      <value>port2</value>
+      <value>port</value>
     </param>
     <param>
       <key>mtu</key>
@@ -790,7 +673,7 @@
     <key>virtual_channel_formatter</key>
     <param>
       <key>id</key>
-      <value>virtual_channel_formatter_0</value>
+      <value>virtual_channel_formatter_0_0</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -806,11 +689,190 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(326, 291)</value>
+      <value>(127, 376)</value>
     </param>
     <param>
       <key>_rotation</key>
       <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>virtual_channel_mux</key>
+    <param>
+      <key>id</key>
+      <value>virtual_channel_mux_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>port_count</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(365, 304)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>simple_mac</key>
+    <param>
+      <key>id</key>
+      <value>simple_mac_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>addr</key>
+      <value>radio_addr</value>
+    </param>
+    <param>
+      <key>maximum_attempts</key>
+      <value>max_arq_attempts</value>
+    </param>
+    <param>
+      <key>timeout</key>
+      <value>arq_timeout</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(627, 275)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>parameter</key>
+    <param>
+      <key>id</key>
+      <value>ampl</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>a</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0.7</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>eng_float</value>
+    </param>
+    <param>
+      <key>short_id</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(347, 760)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>parameter</key>
+    <param>
+      <key>id</key>
+      <value>rx_ant</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>TX/RX</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>string</value>
+    </param>
+    <param>
+      <key>short_id</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(457, 753)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>radio_hier</key>
+    <param>
+      <key>id</key>
+      <value>radio_hier_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>rx_gain</key>
+      <value>rx_gain</value>
+    </param>
+    <param>
+      <key>ampl</key>
+      <value>ampl</value>
+    </param>
+    <param>
+      <key>tx_gain</key>
+      <value>tx_gain</value>
+    </param>
+    <param>
+      <key>rx_freq</key>
+      <value>rx_freq</value>
+    </param>
+    <param>
+      <key>args</key>
+      <value>args</value>
+    </param>
+    <param>
+      <key>samp_per_sym</key>
+      <value>samp_per_sym</value>
+    </param>
+    <param>
+      <key>tx_freq</key>
+      <value>freq</value>
+    </param>
+    <param>
+      <key>rate</key>
+      <value>rate</value>
+    </param>
+    <param>
+      <key>rx_ant</key>
+      <value>rx_ant</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(662, 41)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
     </param>
   </block>
   <connection>
@@ -838,27 +900,9 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>virtual_channel_mux_0</source_block_id>
-    <sink_block_id>virtual_channel_formatter_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>virtual_channel_formatter_0</source_block_id>
-    <sink_block_id>simple_mac_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>1</sink_key>
-  </connection>
-  <connection>
     <source_block_id>virtual_channel_demux_0</source_block_id>
     <sink_block_id>extras_socket_msg_0_0</sink_block_id>
     <source_key>1</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>heart_beat_0_0</source_block_id>
-    <sink_block_id>virtual_channel_mux_0</sink_block_id>
-    <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
@@ -868,8 +912,32 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>extras_socket_msg_0_0</source_block_id>
+    <source_block_id>virtual_channel_formatter_0</source_block_id>
     <sink_block_id>virtual_channel_mux_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>virtual_channel_formatter_0_0</source_block_id>
+    <sink_block_id>virtual_channel_mux_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>heart_beat_0_0</source_block_id>
+    <sink_block_id>virtual_channel_formatter_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>extras_socket_msg_0_0</source_block_id>
+    <sink_block_id>virtual_channel_formatter_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>virtual_channel_mux_0</source_block_id>
+    <sink_block_id>simple_mac_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>1</sink_key>
   </connection>
