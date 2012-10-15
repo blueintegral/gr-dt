@@ -51,7 +51,7 @@ class get_usrp_time(gr.block):
         gr.block.__init__(
             self,
             name = "get_usrp_time",
-            in_sig = ,#TODO - set proper in-sig type
+            in_sig = None,#TODO - THIS IS NOT VALID! - set proper in-sig type
             out_sig = None,
             num_msg_inputs = 0,
             num_msg_outputs = 1,

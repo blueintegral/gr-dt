@@ -57,8 +57,8 @@ class my_first_msg_block(gr.block):
             name = "my_first_msg_block",
             in_sig = None,
             out_sig = None,
-            num_msg_inputs = ,#TODO - specify number of ports
-            num_msg_outputs = , #TODO - specify number of ports
+            num_msg_inputs = 0,#TODO - NOT VALID - specify correct number of ports
+            num_msg_outputs = 0, #TODO - NOT VALID - specify correct number of ports
         )
     
         #we did this for you, this is a blob pmt manager

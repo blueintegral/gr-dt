@@ -39,7 +39,6 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dt_pyth
     "/home/john/src/clean_install/gr-dt/python/my_first_python_block.py"
     "/home/john/src/clean_install/gr-dt/python/my_first_msg_block.py"
     "/home/john/src/clean_install/gr-dt/python/my_second_msg_block.py"
-    "/home/john/src/clean_install/gr-dt/python/my_cognitive_radio_block.py"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dt_python")
 
@@ -50,13 +49,11 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dt_pyth
     "/home/john/src/clean_install/gr-dt/build/python/my_first_python_block.pyc"
     "/home/john/src/clean_install/gr-dt/build/python/my_first_msg_block.pyc"
     "/home/john/src/clean_install/gr-dt/build/python/my_second_msg_block.pyc"
-    "/home/john/src/clean_install/gr-dt/build/python/my_cognitive_radio_block.pyc"
     "/home/john/src/clean_install/gr-dt/build/python/__init__.pyo"
     "/home/john/src/clean_install/gr-dt/build/python/get_usrp_time.pyo"
     "/home/john/src/clean_install/gr-dt/build/python/my_first_python_block.pyo"
     "/home/john/src/clean_install/gr-dt/build/python/my_first_msg_block.pyo"
     "/home/john/src/clean_install/gr-dt/build/python/my_second_msg_block.pyo"
-    "/home/john/src/clean_install/gr-dt/build/python/my_cognitive_radio_block.pyo"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dt_python")
 

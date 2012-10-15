@@ -69,13 +69,6 @@ class my_second_msg_block(gr.block):
         #store them in 'self'
         
         #HINT: you can split a string into a list of floats with:   map(float,freq_list.split(','))
-        
-        self.freq_list = map(float,freq_list.split(','))
-        self.freq_list_len = len(self.freq_list)
-        print self.freq_list_len
-        
-        
-        self.index = 0
 
     def work(self, input_items, output_items):
         

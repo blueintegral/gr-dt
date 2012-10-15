@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Mon Oct  8 22:03:00 2012</timestamp>
+  <timestamp>Sun Oct 14 17:00:19 2012</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -77,44 +77,6 @@
     <param>
       <key>_coordinate</key>
       <value>(10, 170)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>my_first_python_block</key>
-    <param>
-      <key>id</key>
-      <value>my_first_python_block_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(561, 86)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>get_usrp_time</key>
-    <param>
-      <key>id</key>
-      <value>get_usrp_time_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(533, 242)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -778,6 +740,25 @@
     <param>
       <key>_coordinate</key>
       <value>(180, 98)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>get_usrp_time</key>
+    <param>
+      <key>id</key>
+      <value>get_usrp_time_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(681, 168)</value>
     </param>
     <param>
       <key>_rotation</key>

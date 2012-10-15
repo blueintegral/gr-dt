@@ -51,8 +51,8 @@ class my_first_python_block(gr.block):
         gr.block.__init__(
             self,
             name = "my_first_python_block",
-            in_sig = [numpy.float32,numpy.float32],
-            out_sig = [numpy.float32],
+            in_sig = None, #TODO- NOT VALID - must specify inputs
+            out_sig = None, #TODO - NOT VALID - must specific outputs
             num_msg_inputs = 0,
             num_msg_outputs = 0,
         )
@@ -68,10 +68,10 @@ class my_first_python_block(gr.block):
         out = output_items[0]
 
         
-        #process data
-        
-        #we decided to add the two inputs, but you can do something different if you'd like
-        out[:] = in0 + in1
+        #TODO Process Data
+        ###ADD YOUR CODE HERE###
+
+
 
         #consume the inputs
         self.consume(0, len(in0)) #consume port 0 input

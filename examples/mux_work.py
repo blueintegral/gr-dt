@@ -2,7 +2,7 @@
 ##################################################
 # Gnuradio Python Flow Graph
 # Title: Mux Work
-# Generated: Tue Oct  9 12:43:47 2012
+# Generated: Sun Oct 14 17:56:48 2012
 ##################################################
 
 from gnuradio import eng_notation
@@ -38,8 +38,8 @@ class mux_work(grc_wxgui.top_block_gui):
 		# Connections
 		##################################################
 		self.connect((self.virtual_channel_mux_0, 0), (self.virtual_channel_demux_0, 0))
-		self.connect((self.heart_beat_0, 0), (self.virtual_channel_mux_0, 0))
 		self.connect((self.virtual_channel_demux_0, 0), (self.precog_msg_to_stdout_0, 0))
+		self.connect((self.heart_beat_0, 0), (self.virtual_channel_mux_0, 0))
 
 	def get_samp_rate(self):
 		return self.samp_rate

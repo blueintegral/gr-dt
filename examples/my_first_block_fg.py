@@ -2,7 +2,7 @@
 ##################################################
 # Gnuradio Python Flow Graph
 # Title: My First Block Fg
-# Generated: Mon Oct  8 22:19:53 2012
+# Generated: Sun Oct 14 17:15:31 2012
 ##################################################
 
 from gnuradio import eng_notation
@@ -49,7 +49,7 @@ class my_first_block_fg(grc_wxgui.top_block_gui):
 		self.Add(self.wxgui_numbersink2_0.win)
 		self.my_first_python_block_0 = dt.my_first_python_block()
 		self.gr_throttle_0 = gr.throttle(gr.sizeof_float*1, samp_rate)
-		self.const_source_x_0_0 = gr.sig_source_f(0, gr.GR_CONST_WAVE, 0, 0, 2)
+		self.const_source_x_0_0 = gr.sig_source_f(0, gr.GR_CONST_WAVE, 0, 0, -22)
 		self.const_source_x_0 = gr.sig_source_f(0, gr.GR_CONST_WAVE, 0, 0, 5)
 
 		##################################################

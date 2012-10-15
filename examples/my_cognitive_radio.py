@@ -2,7 +2,7 @@
 ##################################################
 # Gnuradio Python Flow Graph
 # Title: My Cognitive Radio
-# Generated: Tue Oct  9 13:28:35 2012
+# Generated: Sun Oct 14 17:03:37 2012
 ##################################################
 
 execfile("/home/john/.grc_gnuradio/radio_hier.py")

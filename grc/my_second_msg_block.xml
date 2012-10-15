@@ -8,15 +8,10 @@
     <name>Second Msg Block</name>
     <key>my_second_msg_block</key>
     <import>import dt</import>
-    <make>dt.my_second_msg_block($freqlist,$blockname)</make>
+    <make>dt.my_second_msg_block($freqlist)</make>
     <param>
         <name>Freq. List</name>
         <key>freqlist</key>
-        <type>string</type>
-    </param>
-    <param>
-        <name>UHD Block Name</name>
-        <key>blockname</key>
         <type>string</type>
     </param>
     <sink>

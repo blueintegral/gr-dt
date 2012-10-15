@@ -38,7 +38,6 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dt_pyth
     "/home/john/src/clean_install/gr-dt/grc/my_first_python_block.xml"
     "/home/john/src/clean_install/gr-dt/grc/my_first_msg_block.xml"
     "/home/john/src/clean_install/gr-dt/grc/my_second_msg_block.xml"
-    "/home/john/src/clean_install/gr-dt/grc/my_cognitive_radio_block.xml"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dt_python")
 
