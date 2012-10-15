@@ -1,2 +1,2 @@
-/home/john/src/clean_install/gr-dt/build/python/CMakeFiles/pygen_python_f9040.dir
-/home/john/src/clean_install/gr-dt/build/CMakeFiles/uninstall.dir
+/home/ubuntu/src/gr-dt/build/python/CMakeFiles/pygen_python_cd363.dir
+/home/ubuntu/src/gr-dt/build/CMakeFiles/uninstall.dir

@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/john/src/clean_install/gr-dt
-# Build directory: /home/john/src/clean_install/gr-dt/build
+# Source directory: /home/ubuntu/src/gr-dt
+# Build directory: /home/ubuntu/src/gr-dt/build
 # 
 # This file includes the relevent testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

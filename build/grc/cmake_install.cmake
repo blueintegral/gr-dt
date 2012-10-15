@@ -1,4 +1,4 @@
-# Install script for directory: /home/john/src/clean_install/gr-dt/grc
+# Install script for directory: /home/ubuntu/src/gr-dt/grc
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,10 +34,10 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dt_python")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gnuradio/grc/blocks" TYPE FILE FILES
-    "/home/john/src/clean_install/gr-dt/grc/get_usrp_time.xml"
-    "/home/john/src/clean_install/gr-dt/grc/my_first_python_block.xml"
-    "/home/john/src/clean_install/gr-dt/grc/my_first_msg_block.xml"
-    "/home/john/src/clean_install/gr-dt/grc/my_second_msg_block.xml"
+    "/home/ubuntu/src/gr-dt/grc/get_usrp_time.xml"
+    "/home/ubuntu/src/gr-dt/grc/my_first_python_block.xml"
+    "/home/ubuntu/src/gr-dt/grc/my_first_msg_block.xml"
+    "/home/ubuntu/src/gr-dt/grc/my_second_msg_block.xml"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dt_python")
 

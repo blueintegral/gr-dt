@@ -1,4 +1,4 @@
-# Install script for directory: /home/john/src/clean_install/gr-dt/python
+# Install script for directory: /home/ubuntu/src/gr-dt/python
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,26 +34,26 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dt_python")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/dt" TYPE FILE FILES
-    "/home/john/src/clean_install/gr-dt/python/__init__.py"
-    "/home/john/src/clean_install/gr-dt/python/get_usrp_time.py"
-    "/home/john/src/clean_install/gr-dt/python/my_first_python_block.py"
-    "/home/john/src/clean_install/gr-dt/python/my_first_msg_block.py"
-    "/home/john/src/clean_install/gr-dt/python/my_second_msg_block.py"
+    "/home/ubuntu/src/gr-dt/python/__init__.py"
+    "/home/ubuntu/src/gr-dt/python/get_usrp_time.py"
+    "/home/ubuntu/src/gr-dt/python/my_first_python_block.py"
+    "/home/ubuntu/src/gr-dt/python/my_first_msg_block.py"
+    "/home/ubuntu/src/gr-dt/python/my_second_msg_block.py"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dt_python")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dt_python")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/dt" TYPE FILE FILES
-    "/home/john/src/clean_install/gr-dt/build/python/__init__.pyc"
-    "/home/john/src/clean_install/gr-dt/build/python/get_usrp_time.pyc"
-    "/home/john/src/clean_install/gr-dt/build/python/my_first_python_block.pyc"
-    "/home/john/src/clean_install/gr-dt/build/python/my_first_msg_block.pyc"
-    "/home/john/src/clean_install/gr-dt/build/python/my_second_msg_block.pyc"
-    "/home/john/src/clean_install/gr-dt/build/python/__init__.pyo"
-    "/home/john/src/clean_install/gr-dt/build/python/get_usrp_time.pyo"
-    "/home/john/src/clean_install/gr-dt/build/python/my_first_python_block.pyo"
-    "/home/john/src/clean_install/gr-dt/build/python/my_first_msg_block.pyo"
-    "/home/john/src/clean_install/gr-dt/build/python/my_second_msg_block.pyo"
+    "/home/ubuntu/src/gr-dt/build/python/__init__.pyc"
+    "/home/ubuntu/src/gr-dt/build/python/get_usrp_time.pyc"
+    "/home/ubuntu/src/gr-dt/build/python/my_first_python_block.pyc"
+    "/home/ubuntu/src/gr-dt/build/python/my_first_msg_block.pyc"
+    "/home/ubuntu/src/gr-dt/build/python/my_second_msg_block.pyc"
+    "/home/ubuntu/src/gr-dt/build/python/__init__.pyo"
+    "/home/ubuntu/src/gr-dt/build/python/get_usrp_time.pyo"
+    "/home/ubuntu/src/gr-dt/build/python/my_first_python_block.pyo"
+    "/home/ubuntu/src/gr-dt/build/python/my_first_msg_block.pyo"
+    "/home/ubuntu/src/gr-dt/build/python/my_second_msg_block.pyo"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dt_python")
 

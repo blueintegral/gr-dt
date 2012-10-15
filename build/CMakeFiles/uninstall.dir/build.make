@@ -31,19 +31,16 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/john/src/clean_install/gr-dt
+CMAKE_SOURCE_DIR = /home/ubuntu/src/gr-dt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/john/src/clean_install/gr-dt/build
+CMAKE_BINARY_DIR = /home/ubuntu/src/gr-dt/build
 
 # Utility rule file for uninstall.
 
 CMakeFiles/uninstall:
-	/usr/bin/cmake -P /home/john/src/clean_install/gr-dt/build/cmake_uninstall.cmake
+	/usr/bin/cmake -P /home/ubuntu/src/gr-dt/build/cmake_uninstall.cmake
 
 uninstall: CMakeFiles/uninstall
 uninstall: CMakeFiles/uninstall.dir/build.make
@@ -58,6 +55,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/john/src/clean_install/gr-dt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/john/src/clean_install/gr-dt /home/john/src/clean_install/gr-dt /home/john/src/clean_install/gr-dt/build /home/john/src/clean_install/gr-dt/build /home/john/src/clean_install/gr-dt/build/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/src/gr-dt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/src/gr-dt /home/ubuntu/src/gr-dt /home/ubuntu/src/gr-dt/build /home/ubuntu/src/gr-dt/build /home/ubuntu/src/gr-dt/build/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

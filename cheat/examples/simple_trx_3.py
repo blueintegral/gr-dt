@@ -2,10 +2,10 @@
 ##################################################
 # Gnuradio Python Flow Graph
 # Title: Simple Trx 3
-# Generated: Wed Oct 10 22:10:50 2012
+# Generated: Mon Oct 15 07:12:26 2012
 ##################################################
 
-execfile("/home/john/.grc_gnuradio/radio_hier.py")
+execfile("/home/ubuntu/.grc_gnuradio/radio_hier.py")
 from gnuradio import eng_notation
 from gnuradio import gr
 from gnuradio.eng_option import eng_option
@@ -20,8 +20,6 @@ class simple_trx_3(grc_wxgui.top_block_gui):
 
 	def __init__(self, rate=1e6, tx_gain=15, samp_per_sym=4, freq=915e6, arq_timeout=.10, max_arq_attempts=10, rx_freq=915e6, rx_gain=15, args="", ampl=0.7, port1="12345", port2="12346", radio_addr=0, dest_addr_1=86, dest_addr_2=87, rx_ant="TX/RX"):
 		grc_wxgui.top_block_gui.__init__(self, title="Simple Trx 3")
-		_icon_path = "/usr/share/icons/hicolor/32x32/apps/gnuradio-grc.png"
-		self.SetIcon(wx.Icon(_icon_path, wx.BITMAP_TYPE_ANY))
 
 		##################################################
 		# Parameters

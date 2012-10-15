@@ -1,4 +1,4 @@
-# Install script for directory: /home/john/src/clean_install/gr-dt
+# Install script for directory: /home/ubuntu/src/gr-dt
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,8 +34,8 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/home/john/src/clean_install/gr-dt/build/python/cmake_install.cmake")
-  INCLUDE("/home/john/src/clean_install/gr-dt/build/grc/cmake_install.cmake")
+  INCLUDE("/home/ubuntu/src/gr-dt/build/python/cmake_install.cmake")
+  INCLUDE("/home/ubuntu/src/gr-dt/build/grc/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
@@ -45,7 +45,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/john/src/clean_install/gr-dt/build/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/ubuntu/src/gr-dt/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/john/src/clean_install/gr-dt/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/ubuntu/src/gr-dt/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)
