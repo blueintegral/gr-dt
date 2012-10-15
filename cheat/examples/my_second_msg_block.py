@@ -2,7 +2,7 @@
 ##################################################
 # Gnuradio Python Flow Graph
 # Title: My Second Msg Block
-# Generated: Sun Oct 14 16:57:58 2012
+# Generated: Mon Oct 15 11:35:02 2012
 ##################################################
 
 from gnuradio import eng_notation
@@ -23,8 +23,6 @@ class my_second_msg_block(grc_wxgui.top_block_gui):
 
 	def __init__(self):
 		grc_wxgui.top_block_gui.__init__(self, title="My Second Msg Block")
-		_icon_path = "/usr/share/icons/hicolor/32x32/apps/gnuradio-grc.png"
-		self.SetIcon(wx.Icon(_icon_path, wx.BITMAP_TYPE_ANY))
 
 		##################################################
 		# Variables

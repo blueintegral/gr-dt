@@ -27,7 +27,7 @@ python simple_trx_3.py --radio-addr 85 --dest-addr-1 86 --port1 12345 --port2 12
 
 ---simple_trx_4.py working command---
 
-python simple_trx_2.py --radio-addr 85 --dest-addr 86 --args addr=192.168.10.3 --tx-gain 5 --rx-gain 5 --port 12345
+python simple_trx_4.py --radio-addr 85 --dest-addr 86 --args addr=192.168.10.3 --tx-gain 5 --rx-gain 5 --port 12345
 
 python simple_trx_4.py --radio-addr 86 --dest-addr 85 --args addr=192.168.10.2 --tx-gain 5 --rx-gain 5 --port 12346
 

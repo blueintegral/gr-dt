@@ -2,7 +2,7 @@
 ##################################################
 # Gnuradio Python Flow Graph
 # Title: My First Block Fg
-# Generated: Mon Oct 15 07:12:54 2012
+# Generated: Mon Oct 15 11:33:48 2012
 ##################################################
 
 from gnuradio import eng_notation
