@@ -1,2 +1,0 @@
-/home/ubuntu/src/gr-dt/build/python/CMakeFiles/pygen_python_cd363.dir
-/home/ubuntu/src/gr-dt/build/CMakeFiles/uninstall.dir
