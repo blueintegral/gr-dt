@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+##Cognitive Radio Shell
+###################################################
+ -->
+<block>
+    <name>My Cognitive Radio Block</name>
+    <key>my_cognitive_radio_block</key>
+    <import>import dt</import>
+    <make>dt.my_cognitive_radio_block()</make>
+    <sink>
+        <name>data_in</name>
+        <type></type>
+        <optional>1</optional>
+    </sink>
+    <sink>
+        <name>ctrl_in</name>
+        <type></type>
+        <optional>1</optional>
+    </sink>
+    <source>
+        <name>data_out</name>
+        <type></type>
+        <optional>1</optional>
+    </source>
+    <source>
+        <name>ctrl_out</name>
+        <type></type>
+        <optional>1</optional>
+    </source>
+    <doc>
+Dyspan tutorial.  Cognitive Radio Shell.
+    </doc>
+</block>

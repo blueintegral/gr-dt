@@ -1,0 +1,40 @@
+---simple_trx_1.py working command ---
+
+python simple_trx_1.py --args addr=192.168.10.3 --tx-gain 5 --rx-gain 5 --port 12345
+
+python simple_trx_1.py --args addr=192.168.10.2 --tx-gain 15 --rx-gain 15 --port 12346 --tx-gain 5 --rx-gain 5
+
+nc 127.0.0.1 12345
+
+nc 127.0.0.1 12346
+
+---simple_trx_2.py working command ---
+
+python simple_trx_2.py --radio-addr 86 --dest-addr 85 --args addr=192.168.10.2 --tx-gain 5 --rx-gain 5 --port 12346
+
+python simple_trx_2.py --radio-addr 85 --dest-addr 86 --args addr=192.168.10.3 --tx-gain 5 --rx-gain 5 --port 12345
+
+nc 127.0.0.1 12345
+
+nc 127.0.0.1 12346
+
+---simple_trx_3.py working command---
+
+python simple_trx_3.py --radio-addr 86 --dest-addr-1 85 --dest-addr-2 87 --port1 12347 --port2 12348 --args addr=192.168.10.2 --tx-gain 5 --rx-gain 5 
+
+python simple_trx_3.py --radio-addr 85 --dest-addr-1 86 --port1 12345 --port2 12346 --dest-addr-2 87 --args addr=192.168.10.3 --tx-gain 5 --rx-gain 5 --rx-ant RX2
+
+
+---simple_trx_4.py working command---
+
+python simple_trx_2.py --radio-addr 85 --dest-addr 86 --args addr=192.168.10.3 --tx-gain 5 --rx-gain 5 --port 12345
+
+python simple_trx_4.py --radio-addr 86 --dest-addr 85 --args addr=192.168.10.2 --tx-gain 5 --rx-gain 5 --port 12346
+
+nc 127.0.0.1 12345
+
+nc 127.0.0.1 12347
+
+
+
+
