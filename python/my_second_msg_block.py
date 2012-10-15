@@ -64,13 +64,11 @@ class my_second_msg_block(gr.block):
         self.mgr = pmt.pmt_mgr()
         for i in range(64):
             self.mgr.set(pmt.pmt_make_blob(10000))
-            
-        self.freq_list = map(float,freq_list.split(','))
-        self.freq_list_len = len(self.freq_list)
-        print self.freq_list_len
         
+        #TODO: read arguments passed from gnuradio/grc...
+        #store them in 'self'
         
-        self.index = 0
+        #HINT: you can split a string into a list of floats with:   map(float,freq_list.split(','))
 
     def work(self, input_items, output_items):
         
@@ -78,36 +76,17 @@ class my_second_msg_block(gr.block):
             try: msg = self.pop_msg_queue()
             except: return -1
 
-            #test to make sure this is a blob
-            if not pmt.pmt_is_blob(msg.value):
-                continue
+            #TODO: test to make sure incoming msg is a blob
+            
+            #TODO: write code to print anything received on data port
+            
+            #TODO: write code to change usrp address to next freq in list when 
+            #msg received on ctrl port
+            
+            #HINT: the line below will write a msg out the ctrl port
+            #HINT: use PMT RPC block in flow graph
+            
+            
+            # self.post_msg(CTRL_OUT,pmt.pmt_string_to_symbol('usrp_source.set_center_freq'),pmt.from_python( ( ( freq , ), { } ) ),pmt.pmt_string_to_symbol('2nd_block'))
 
-            if msg.offset == DATA_IN:
-        
-                #recall that a pmt includes a key, source, offset, and value
-                key = pmt.pmt_symbol_to_string(msg.key)
-                print "Key: ",key
-                
-                #now lets get the actual data
-                blob = pmt.pmt_blob_data(msg.value)
-                
-                print "Blob Value: ",blob.tostring()
-                
-            else:
-                
-                pkt_str = "I've seen an event"
-                key_str = "event_report"
-                src_str = "my_first_msg_block"
-                
-                blob = self.mgr.acquire(True) #block
-                pmt.pmt_blob_resize(blob, len(pkt_str))
-                pmt.pmt_blob_rw_data(blob)[:] = numpy.fromstring(pkt_str, dtype='uint8')
-   
-                self.post_msg(DATA_OUT, pmt.pmt_string_to_symbol(key_str), msg.value, pmt.pmt_string_to_symbol(src_str))
-                
-                print self.freq_list[self.index]
-                
-                self.post_msg(CTRL_OUT,pmt.pmt_string_to_symbol('usrp_source.set_center_freq'),pmt.from_python( ( ( self.freq_list[self.index] , ), { } ) ),pmt.pmt_string_to_symbol('2nd_block'))
-
-                self.index = ( self.index + 1 ) % self.freq_list_len
 

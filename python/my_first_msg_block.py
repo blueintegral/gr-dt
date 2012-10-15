@@ -57,10 +57,11 @@ class my_first_msg_block(gr.block):
             name = "my_first_msg_block",
             in_sig = None,
             out_sig = None,
-            num_msg_inputs = 2,
-            num_msg_outputs = 2,
+            num_msg_inputs = 0,#TODO - NOT VALID - specify correct number of ports
+            num_msg_outputs = 0, #TODO - NOT VALID - specify correct number of ports
         )
     
+        #we did this for you, this is a blob pmt manager
         self.mgr = pmt.pmt_mgr()
         for i in range(64):
             self.mgr.set(pmt.pmt_make_blob(10000))
@@ -71,40 +72,6 @@ class my_first_msg_block(gr.block):
             try: msg = self.pop_msg_queue()
             except: return -1
 
-            #test to make sure this is a blob
-            if not pmt.pmt_is_blob(msg.value):
-                continue
-
-            if msg.offset == DATA_IN:
-        
-                #recall that a pmt includes a key, source, offset, and value
-                key = pmt.pmt_symbol_to_string(msg.key)
-                #print "Key: ",key
-                
-                #now lets get the actual data
-                blob = pmt.pmt_blob_data(msg.value)
-                
-                if blob[0] == 0:
-                    tx_str = "Emitter off\n\r"
-                else:
-                    tx_str = "Emitter detected\n\r"
-                
-                #print "Blob Value: ",blob.tostring()
-                
-                blob = self.mgr.acquire(True) #block
-                pmt.pmt_blob_resize(blob, len(tx_str))
-                pmt.pmt_blob_rw_data(blob)[:] = numpy.fromstring(tx_str, dtype='uint8')
-                
-                self.post_msg(0,pmt.pmt_string_to_symbol("n/a"), blob, pmt.pmt_string_to_symbol("rpt") )
-                
-            else:
-                
-                pkt_str = "I've seen an event"
-                key_str = "event_report"
-                src_str = "my_first_msg_block"
-                
-                blob = self.mgr.acquire(True) #block
-                pmt.pmt_blob_resize(blob, len(pkt_str))
-                pmt.pmt_blob_rw_data(blob)[:] = numpy.fromstring(pkt_str, dtype='uint8')
-   
-                self.post_msg(0, pmt.pmt_string_to_symbol(key_str), msg.value, pmt.pmt_string_to_symbol(src_str))
+            #TODO: test to make sure incoming msg is a blob
+            
+            #TODO: write code to process msg's from data or ctrl ports

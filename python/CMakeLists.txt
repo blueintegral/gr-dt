@@ -28,7 +28,6 @@ list(APPEND python_sources
     my_first_python_block.py
     my_first_msg_block.py
     my_second_msg_block.py
-    my_cognitive_radio_block.py
 )
 
 GR_PYTHON_INSTALL(

@@ -25,7 +25,6 @@ list(APPEND grc_sources
     my_first_python_block.xml
     my_first_msg_block.xml
     my_second_msg_block.xml
-    my_cognitive_radio_block.xml
 )
 
 install(

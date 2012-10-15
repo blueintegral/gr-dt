@@ -51,17 +51,18 @@ class get_usrp_time(gr.block):
         gr.block.__init__(
             self,
             name = "get_usrp_time",
-            in_sig = [numpy.complex64],
+            in_sig = None,#TODO - THIS IS NOT VALID! - set proper in-sig type
             out_sig = None,
             num_msg_inputs = 0,
             num_msg_outputs = 1,
         )
     
+        #keep tags from propgating across block
+        self.set_tag_propagation_policy(gr_extras.TPP_DONT)    
+
         self.know_time = False
         self.found_time = False
         self.found_rate = False
-        self.set_tag_propagation_policy(gr_extras.TPP_DONT)    
-
         
     def work(self, input_items, output_items):
             
@@ -70,30 +71,12 @@ class get_usrp_time(gr.block):
         nread = self.nitems_read(0) #number of items read on port 0
         ninput_items = len(input_items[0])
 
-        #read all tags associated with port 0 for items in this work function
-        tags = self.get_tags_in_range(0, nread, nread+ninput_items)
-
-        #lets find all of our tags, making the appropriate adjustments to our timing
-        for tag in tags:
-            key_string = pmt.pmt_symbol_to_string(tag.key)
-            if key_string == "rx_time":
-                self.samples_since_last_rx_time = 0
-                self.current_integer,self.current_fractional = pmt.to_python(tag.value)
-                self.time_update = self.current_integer + self.current_fractional
-                self.found_time = True
-            elif key_string == "rx_rate":
-                self.rate = pmt.to_python(tag.value)
-                self.sample_period = 1/self.rate
-                self.found_rate = True
+        #TODO: write code to look for tags, count samples, and determine time
+        ##########HERE##############
         
-        #set know_time True for useful state machines
-        if not self.know_time:
-            if self.found_time and self.found_rate:
-                self.know_time = True
-                print 'know time'
-        else:
-            self.time_update += (self.sample_period * ninput_items)
-            print self.time_update
+        #HINT: look for all tags.  Once the block has found them and knows
+        # time of first sample and rate, the block can count samples to determine
+        # time
         
         return ninput_items
         

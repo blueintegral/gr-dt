@@ -21,4 +21,3 @@ from get_usrp_time import *
 from my_first_python_block import *
 from my_first_msg_block import *
 from my_second_msg_block import *
-from my_cognitive_radio_block import *
