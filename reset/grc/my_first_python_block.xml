@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+##My First Python Bock
+###################################################
+ -->
+<block>
+    <name>First Python Block</name>
+    <key>my_first_python_block</key>
+    <import>import dt</import>
+    <make>dt.my_first_python_block()</make>
+    <sink>
+        <name>in</name>
+        <type>float</type>
+    </sink>
+    <sink>
+        <name>in</name>
+        <type>float</type>
+    </sink>
+    <source>
+        <name>out</name>
+        <type>float</type>
+    </source>
+    <doc>
+Dyspan tutorial.  First python block.  Simple operation on floats.
+    </doc>
+</block>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+##Get USRP Time
+###################################################
+ -->
+<block>
+    <name>First Msg Block</name>
+    <key>my_first_msg_block</key>
+    <import>import dt</import>
+    <make>dt.my_first_msg_block()</make>
+    <sink>
+        <name>data_in</name>
+        <type></type>
+        <optional>1</optional>
+    </sink>
+    <sink>
+        <name>ctrl_in</name>
+        <type></type>
+        <optional>1</optional>
+    </sink>
+    <source>
+        <name>data_out</name>
+        <type></type>
+        <optional>1</optional>
+    </source>
+    <source>
+        <name>ctrl_out</name>
+        <type></type>
+        <optional>1</optional>
+    </source>
+    <doc>
+Dyspan tutorial.  Msg I/O and manipulation.
+    </doc>
+</block>

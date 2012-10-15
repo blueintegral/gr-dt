@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+##Get USRP Time
+###################################################
+ -->
+<block>
+    <name>Get USRP Time</name>
+    <key>get_usrp_time</key>
+    <import>import dt</import>
+    <make>dt.get_usrp_time()</make>
+    <sink>
+        <name>usrp</name>
+        <type>complex</type>
+    </sink>
+    <source>
+        <name>msg_out</name>
+        <type></type>
+        <optional>1</optional>
+    </source>
+    <doc>
+Dyspan tutorial.  Gets USRP time - and prints it?
+    </doc>
+</block>
